@@ -1,0 +1,66 @@
+$primary-color: #2c3e50;
+$secondary-color: #ecf0f1;
+$accent-color: #e74c3c;
+$font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+body {
+    font-family: $font-stack;
+    margin: 0;
+    padding: 0;
+    background-color: $secondary-color;
+    color: $primary-color;
+}
+
+.about-page {
+    .about-section {
+        background-color: $secondary-color;
+        padding: 3rem 0;
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+
+            h1, h2 {
+                color: $primary-color;
+            }
+
+            p {
+                line-height: 1.6;
+                margin-bottom: 2rem;
+            }
+
+            .team {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                margin-top: 2rem;
+
+                .team-member {
+                    text-align: center;
+                    margin: 1rem;
+                    padding: 1rem;
+                    background-color: $primary-color;
+                    color: $secondary-color;
+                    border-radius: 8px;
+                    width: calc(33.333% - 2rem);
+
+                    img {
+                        border-radius: 50%;
+                        width: 150px;
+                        height: 150px;
+                        object-fit: cover;
+                        margin-bottom: 1rem;
+                    }
+
+                    h3 {
+                        margin: 0.5rem 0;
+                    }
+
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,113 @@
+$primary-color: #2c3e50;
+$secondary-color: #ecf0f1;
+$accent-color: #e74c3c;
+$font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$breakpoint-md: 768px;
+
+body {
+    font-family: $font-stack;
+    margin: 0;
+    padding: 0;
+    background-color: $secondary-color;
+    color: $primary-color;
+}
+
+.contact-page {
+    .contact-section {
+        padding: 3rem 1rem;
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: $secondary-color;
+
+            h1, h2 {
+                color: $primary-color;
+                text-align: center;
+            }
+
+            p {
+                line-height: 1.6;
+                margin-bottom: 2rem;
+                text-align: center;
+            }
+
+            .contact-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 3rem;
+
+                .contact-item {
+                    margin: 1rem 0;
+                    text-align: center;
+
+                    h2 {
+                        margin-bottom: 0.5rem;
+                    }
+
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+
+            .contact-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .form-group {
+                    width: 100%;
+                    max-width: 600px;
+                    margin-bottom: 1.5rem;
+
+                    label {
+                        display: block;
+                        margin-bottom: 0.5rem;
+                        color: $primary-color;
+                    }
+
+                    input, textarea {
+                        width: 100%;
+                        padding: 0.75rem;
+                        border: 1px solid $primary-color;
+                        border-radius: 5px;
+                        background-color: $secondary-color;
+                        color: $primary-color;
+                    }
+                }
+
+                .btn {
+                    padding: 0.75rem 1.5rem;
+                    background-color: $primary-color;
+                    color: $secondary-color;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+
+                    &:hover {
+                        background-color: $accent-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    .contact-page {
+        .contact-section {
+            .contact-info {
+                flex-direction: row;
+                justify-content: space-around;
+
+                .contact-item {
+                    margin: 1rem;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
